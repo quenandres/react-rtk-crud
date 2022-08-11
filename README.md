@@ -41,3 +41,10 @@ export default taskSlice.reducer;
 ```js
 import taskReducers from './../features/tasks/taskSlice';
 ```
+---
+```js
+import {useDispatch, useSelector} from 'react-redux';
+```
+__useDispatch__: Funciones que se utilizan para llamar a actualizar el estado.
+__useSelector__: Forma en la que se traen los datos dentro del estado.
+
