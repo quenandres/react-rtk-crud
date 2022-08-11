@@ -23,3 +23,21 @@ root.render(
 
 __Reducers__: Son la forma en la que actualizaremos el estado (setState) actualiza un estado.
 __Slice__: Un slice es una parte de todo el estado.
+```js
+import { createSlice } from '@reduxjs/toolkit';
+
+export const taskSlice = createSlice({
+    name:'tasks',
+    initialState: [],
+    reducers: { //Funcionaes
+
+    }
+});
+
+export default taskSlice.reducer;
+```
+ El taskSlice es un objeto creado a partir de _createSlice_. Por defecto se debe exportar por default sus reducers. Lo que espera el store son los reducers, ya que con estos hacemos los cambios del estado del slice.
+
+```js
+import taskReducers from './../features/tasks/taskSlice';
+```
