@@ -48,3 +48,20 @@ import {useDispatch, useSelector} from 'react-redux';
 __useDispatch__: Funciones que se utilizan para llamar a actualizar el estado.
 __useSelector__: Forma en la que se traen los datos dentro del estado.
 
+*archivo.js*
+```js
+const taksSelect = useSelector(state => state.tasks);
+```
+----
+*store.js*
+```js
+import { configureStore } from '@reduxjs/toolkit';
+import taskReducers from './../features/tasks/taskSlice';
+
+export const store = configureStore({
+    reducer: {
+        tasks: taskReducers
+    }
+});
+```
+

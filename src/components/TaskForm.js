@@ -1,10 +1,29 @@
-import { useSelector } from 'react-redux';
+import {useState} from 'react';
 
 export const TaksForm = () => {
-    const taksSelect = useSelector(state => state.tasks);
-    console.log('TaksList');
-    console.log(taksSelect);
+
+  const [task, setTask] = useState({
+    title: '',
+    description: ''
+  });
+
+  const handleChange = e => {
+    setTask({
+      ...task,
+      [e.target.name]: e.target.value
+    })  
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(task);
+  }
+
   return (
-    <div>TaksForm</div>
+    <form onSubmit={handleSubmit}>
+      <input name='title' type="text" placeholder='title' onChange={handleChange} />
+      <textarea name="description" placeholder="description" onChange={handleChange}></textarea>
+      <button>save</button>
+    </form>
   )
 }
