@@ -5,3 +5,19 @@
 
 Hacemos limpieza de los archivos innecesarios.
 
+_configureStore_: Nos devuelve un objeto donde podremos dividir los estados de miltiples archivos de la app. ConfigureStore los agrupa en uno solo para poder accederlos a cualquier lugar.
+
+_Provider_: Componente que va a englobar toda la aplicación para que sin importar donde este la aplicacion va a llamar al provider
+```js
+import { Provider } from 'react-redux';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <Provider>
+      <App />
+    </Provider>
+  </React.StrictMode>
+);
+```
+
