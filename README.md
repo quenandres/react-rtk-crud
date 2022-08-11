@@ -21,3 +21,5 @@ root.render(
 );
 ```
 
+__Reducers__: Son la forma en la que actualizaremos el estado (setState) actualiza un estado.
+__Slice__: Un slice es una parte de todo el estado.
