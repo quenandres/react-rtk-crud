@@ -93,4 +93,14 @@ npm install react-router-dom@6
 Instalacion y funcionamiento de react-router-dom.
 
 
+## Edit taks
+```js
+useParams
+```
+Hook de react-router para determinar si la pagina tiene parametros o no.
+
+```js
+useNavigate
+```
+Hook de react-router para navegar entre rutas.
 

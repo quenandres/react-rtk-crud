@@ -12,6 +12,7 @@ function App() {
         <Routes>
           <Route path='/' element={<TaksList />} />
           <Route path='/create-task' element={<TaksForm />} />
+          <Route path='/edit-task/:id' element={<TaksForm />} />
         </Routes>            
       </BrowserRouter>
     </div>
