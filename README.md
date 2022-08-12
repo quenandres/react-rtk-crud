@@ -65,3 +65,25 @@ export const store = configureStore({
 });
 ```
 
+Agregar funcionalidad al slice
+```js
+export const taskSlice = createSlice({
+    name:'tasks',
+    initialState,
+    reducers: { //Funcionaes
+        // La funcion addTaks podra ser llamada desde cualquier parte de la aplicación.
+        addTask:(state, action) => {
+            // Con el action vienen 2 parametros
+            // type y payload
+            // El type indica a que funcion ir (tasks/addTaks)
+            // El payload trae los parametros
+        }
+    }
+});
+
+export const { addTask } = taskSlice.actions;
+// En este caso taskSlice.actions seran los mismos reducers (Operaciones para cambiar estados).
+```
+
+
+
