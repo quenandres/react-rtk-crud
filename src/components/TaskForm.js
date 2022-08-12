@@ -52,10 +52,12 @@ export const TaksForm = () => {
   
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input name='title' type="text" placeholder='title' value={task.title} onChange={handleChange} />
-      <textarea name="description" placeholder="description" value={task.description} onChange={handleChange}></textarea>
-      <button>save</button>
+    <form onSubmit={handleSubmit} className='bg-zinc-800 max-w-sm p-4'>
+      <label htmlFor="title" className='block text-xs font-bold mb-2'>Task:</label>
+      <input name='title' className='w-full p-2 rounded-md bg-zinc-600 mb-2' type="text" placeholder='title' value={task.title} onChange={handleChange} />
+      <label htmlFor="description" className='block text-xs font-bold mb-2'>Description:</label>
+      <textarea name="description" className='w-full p-2 rounded-md bg-zinc-600 mb-2' placeholder="description" value={task.description} onChange={handleChange}></textarea>
+      <button className='bg-indigo-600 px-2 py-1'>save</button>
     </form>
   )
 }

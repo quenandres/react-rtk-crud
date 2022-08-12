@@ -104,3 +104,8 @@ useNavigate
 ```
 Hook de react-router para navegar entre rutas.
 
+## TailwindCSS
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+```
