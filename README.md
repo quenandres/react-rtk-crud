@@ -85,5 +85,12 @@ export const { addTask } = taskSlice.actions;
 // En este caso taskSlice.actions seran los mismos reducers (Operaciones para cambiar estados).
 ```
 
+## React-router
+```js
+npm install react-router-dom@6
+```
+
+Instalacion y funcionamiento de react-router-dom.
+
 
 

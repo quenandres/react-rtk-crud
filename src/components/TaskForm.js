@@ -2,6 +2,8 @@ import {useState} from 'react';
 import { useDispatch } from 'react-redux';
 import { addTask } from '../features/tasks/taskSlice';
 import { v4 as uuid } from 'uuid';
+import { useNavigate } from 'react-router-dom';
+
 
 export const TaksForm = () => {
 
@@ -11,6 +13,7 @@ export const TaksForm = () => {
   });
 
   const dispatch = useDispatch();//Permite disparar eventos
+  const navigate = useNavigate();
 
   const handleChange = e => {
     setTask({
@@ -26,6 +29,8 @@ export const TaksForm = () => {
       ...task,
       id: uuid()
     }));
+
+    navigate('/');
   }
 
   return (
